@@ -13,9 +13,9 @@ spring:
         - id: service-consumer
           uri: lb://service-consumer
           predicates:
-            - Path: /consumer/**
-              filters:
-                - StripPrefix: 1
+           - Path= /consumer/**
+          filters:
+           - StripPrefix=1
     consul:
       host: 127.0.0.1
       port: 8500
